@@ -34,6 +34,10 @@ bool BMP085Sensor::getMetrics(meshtastic_Telemetry *measurement)
     measurement->variant.environment_metrics.barometric_pressure = bmp085.readPressure() / 100.0F;
 // Testing Low Temperature cutoff idea
     if (bmp085.readTemperature() < 3){
+        digitalWrite(PIN_CE, LOW);
+    }
+    else {
+        digitalWrite(PIN_CE, HIGH);
     }
 
     return true;
