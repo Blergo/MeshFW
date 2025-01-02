@@ -143,8 +143,8 @@ static const uint8_t SCK = PIN_SPI_SCK;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA (13)
-#define PIN_WIRE_SCL (14)
+#define PIN_WIRE_SDA (24)
+#define PIN_WIRE_SCL (25)
 
 // QSPI Pins
 #define PIN_QSPI_SCK 3
