@@ -32,6 +32,10 @@ const uint32_t g_ADigitalPinMap[] = {
 
 void initVariant()
 {
+    // Charge Enable
+    pinMode(PIN_CE, OUTPUT);
+    digitalWrite(PIN_CE, HIGH);
+  
     // LED1 & LED2
     pinMode(PIN_LED1, OUTPUT);
     ledOff(PIN_LED1);
