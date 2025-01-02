@@ -694,7 +694,7 @@ void Power::readPowerStatus()
     // LOG_DEBUG("NRF Power %d", nrf_usb_state);
 
     // If changed to DISCONNECTED
-    if (digitalRead (PIN_CE) == 0)
+    if (digitalRead(PIN_CE) == 0)
         isCharging = usbPowered = OptFalse;
    //  If changed to CONNECTED / READY
     else
