@@ -690,13 +690,13 @@ void Power::readPowerStatus()
 #ifdef NRF_APM // Section of code detects USB power on the RAK4631 and updates the power states.  Takes 20 seconds or so to detect
                // changes.
 
-    nrfx_power_usb_state_t nrf_usb_state = nrfx_power_usbstatus_get();
+//    nrfx_power_usb_state_t nrf_usb_state = nrfx_power_usbstatus_get();
     // LOG_DEBUG("NRF Power %d", nrf_usb_state);
 
     // If changed to DISCONNECTED
-    if (nrf_usb_state == NRFX_POWER_USB_STATE_DISCONNECTED)
+    if (digitalRead (PIN_CE) == 0)
         isCharging = usbPowered = OptFalse;
-    // If changed to CONNECTED / READY
+   //  If changed to CONNECTED / READY
     else
         isCharging = usbPowered = OptTrue;
 
