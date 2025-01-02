@@ -43,6 +43,9 @@ extern "C" {
 #define NUM_ANALOG_INPUTS (6)
 #define NUM_ANALOG_OUTPUTS (0)
 
+// Charge Enable
+#define PIN_CE (4)
+
 // LEDs
 #define PIN_LED1 (35)
 #define PIN_LED2 (36)
@@ -62,8 +65,8 @@ extern "C" {
 #define PIN_BUTTON1 9 // Pin for button on E-ink button module or IO expansion
 #define BUTTON_NEED_PULLUP
 #define PIN_BUTTON2 12
-#define PIN_BUTTON3 24
-#define PIN_BUTTON4 25
+#define PIN_BUTTON3 13
+#define PIN_BUTTON4 14
 
 /*
  * Analog pins
